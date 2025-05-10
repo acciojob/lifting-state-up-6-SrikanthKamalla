@@ -11,7 +11,7 @@ const App = () => {
 
   const handleComplete = (todo) => {
     const updatedTodos = todos.map((ele) =>
-      ele === todo ? { ...ele, completed: true } : ele
+      ele.task === todo.task ? { ...ele, completed: true } : ele
     );
     setTodos(updatedTodos);
   };
